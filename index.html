@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Jija's BDay</title>
+   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Quicksand&display=swap" rel="stylesheet">
+   <style>
+      body {
+         background: linear-gradient(135deg, #a147f5, #577ef2);
+         font-family: 'Quicksand', sans-serif;
+         margin: 0;
+         padding: 20px;
+      }
+
+      .card1 {
+         background-color: white;
+         width: 90%;
+         max-width: 500px;
+         margin: 40px auto;
+         padding: 25px;
+         border-radius: 15px;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+         text-align: center;
+      }
+
+      .card1 h1 {
+         font-family: 'Dancing Script', cursive;
+         font-size: 2.2em;
+         color: #333;
+         margin-bottom: 10px;
+      }
+
+      .card1 p {
+         font-size: 1rem;
+         line-height: 1.6;
+         margin: 10px 0;
+         color: #444;
+      }
+
+      .card1 img {
+         width: 100%;
+         max-width: 300px;
+         height: auto;
+         border-radius: 12px;
+         margin: 20px 0;
+      }
+
+      .cute-button {
+         background-color: #ff8fa3;
+         color: white;
+         border: none;
+         padding: 12px 24px;
+         font-size: 16px;
+         border-radius: 25px;
+         cursor: pointer;
+         transition: all 0.3s ease;
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+         margin-top: 15px;
+      }
+
+      .cute-button:hover {
+         background-color: #ff5c8a;
+         transform: scale(1.05);
+         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      a {
+         text-decoration: none;
+      }
+      @media (max-width: 480px) {
+         .card1 {
+            padding: 20px 15px;
+         }
+
+         .card1 h1 {
+            font-size: 1.8em;
+         }
+
+         .card1 p {
+            font-size: 0.95rem;
+         }
+
+         .cute-button {
+            font-size: 14px;
+            padding: 10px 20px;
+         }
+      }
+   </style>
+
+</head>
+<body>
+<script>
+  var password = prompt("Enter the secret password to view the page:");
+  if (password !== "lovelove") {
+    document.body.innerHTML = "<h2 style='text-align:center; margin-top:50px;'>Access Denied 💔</h2>";
+  }
+</script>
+
+   <div class="card1">
+      <h1>Happy Birthday <b><i>Aditi</i> 🎂</h1>
+      <p>To my amazing , my forever friend 💕</p>
+      <img src="./aditi.jpeg" alt="Photo of us together">
+      <p>"You’re not just my freind, you’re my closest friend and the most precious part of my life. I love you more than words can ever say." 💖</p>
+      <a href="page22.html" class="cute-button">See Our Memories 📸</a>
+   </div>
+
+</body>
+</html>

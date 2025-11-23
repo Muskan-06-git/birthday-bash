@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memory Flip Cards</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff0f0;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #5b0000;
+      margin-bottom: 20px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      padding-top: 130%; /* Makes it square */
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .card:hover .card-inner,
+    .card:active .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      backface-visibility: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-back {
+      background-color: #fcb6b6;
+      color: #5b0000;
+      transform: rotateY(180deg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .button {
+         background-color: #ff8fa3;
+         color: white;
+         border: none;
+         padding: 12px 24px;
+         width:auto;
+         font-size: 16px;
+         border-radius: 25px;
+         cursor: pointer;
+         transition: all 0.3s ease;
+         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+         margin-top: 15px;
+         display: flex;
+         align-content: center;
+         justify-content:center ;
+      
+      }
+      .button:hover {
+         background-color: #ff5c8a;
+         transform: scale(1.05);
+         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      a {
+         text-decoration: none;
+      }
+
+    /* Responsive text for smaller screens */
+    @media (max-width: 480px) {
+      .card-back {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Here are some moments from our cherished memories 💖</h2>
+
+  <div class="gallery">
+    <!-- Card 1 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="./bus.jpeg" alt="Memory 1">
+        </div>
+        <div class="card-back">
+          That night in the bus to Mathura… we laughed too much, feared a little, and enjoyed like crazy. One of the sweetest memories with you. 💖✨
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="./farewell.jpeg" alt="Memory 2">
+        </div>
+        <div class="card-back">
+          Farewell photo: hum reality me emotional, photo me overconfident. But that time when we both slay in saree.🎀✨
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="./navratri.jpeg" alt="Memory 3">
+        </div>
+        <div class="card-back">
+          Remember that day we proved: exams can wait, garba can’t.?😂💃
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="./mandir.jpeg" alt="Memory 4">
+        </div>
+        <div class="card-back">
+          Temple trip: darshan se jyada darr tha HOD ka!😂🙏
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="./yamuna.jpeg" alt="Memory 5">
+        </div>
+        <div class="card-back">
+          Boats were normal, but humlog ka attitude: ‘Humare boat best. No arguments💗
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="page_3.html" class="button">A message from me 💌</a>
+
+</body>
+</html>
